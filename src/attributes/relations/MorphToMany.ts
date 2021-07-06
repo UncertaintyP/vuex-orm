@@ -239,7 +239,7 @@ export default class MorphToMany extends Relation {
     related.forEach((id) => {
       const parentId = record[this.parentKey]
       const relatedId = data[this.related.entity][id][this.relatedKey]
-      const pivotKey = JSON.stringify([parentId, id, parent.entity];
+      const pivotKey = JSON.stringify([parentId, id, parent.entity])
       const pivotData = data[this.related.entity][id][this.pivotKey] || {}
 
       data[this.pivot.entity] = {
