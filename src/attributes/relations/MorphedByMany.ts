@@ -229,7 +229,7 @@ export default class MorphedByMany extends Relation {
   ): void {
     related.forEach((id) => {
       const parentId = record[this.parentKey]
-      const pivotKey = JSON.stringify([id, parentId, this.related.entity]);
+      const pivotKey = JSON.stringify([id, parentId, this.related.entity])
       const pivotData = data[this.related.entity][id][this.pivotKey] || {}
 
       data[this.pivot.entity] = {
